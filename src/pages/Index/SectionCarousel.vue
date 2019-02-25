@@ -23,22 +23,22 @@
         <b class="title">新锐旅游网站</b>
         <p class="subtitle">您身边的好玩专家</p>
         <p>发现周边好玩的地方，玩得快乐，玩得精彩。</p>
-      </div>
-      <div class="row">
-        <div class="col-md-2 col-xs-1"></div>
-        <div class="col-md-8 col-xs-10">
-          <q-input
-            inverted-light
-            color="white"
-            placeholder="输入城市/景点 或是想去的地方"
-            :after="[{icon:'fas fa-search-location'}]"
-            v-model="search">
-            <q-autocomplete
-              :static-data="{field: 'label', list: countries}"
-              :filter="advFilter"/>
-          </q-input>
+        <div class="row">
+          <div class="col-md-2 col-xs-1"></div>
+          <div class="col-md-8 col-xs-10">
+            <q-input
+              inverted-light
+              color="white"
+              placeholder="输入城市/景点 或是想去的地方"
+              :after="[{icon:'fas fa-search-location'}]"
+              v-model="search">
+              <q-autocomplete
+                :static-data="{field: 'label', list: countries}"
+                :filter="advFilter"/>
+            </q-input>
+          </div>
+          <div class="col-md-2 col-xs-1"></div>
         </div>
-        <div class="col-md-2 col-xs-1"></div>
       </div>
     </q-carousel-control>
   </q-carousel>
@@ -79,6 +79,14 @@
   .carouselInput .main {
     text-align center
     color: #f50057
+  }
+
+  .carouselInput .main .search {
+    width: 300px
+  }
+
+  .row {
+    right: 18px
   }
 
   @media (min-width: 768px) {
