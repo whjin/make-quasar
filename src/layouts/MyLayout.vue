@@ -14,8 +14,8 @@
           <q-btn class="q-mr-md" flat>精选景点</q-btn>
           <q-btn class="q-mr-md" flat>美食地图</q-btn>
           <q-btn class="q-mr-md" flat>夜宿晓行</q-btn>
-          <q-btn class="q-mr-md" flat>注册</q-btn>
           <q-btn class="q-mr-md" flat>登录</q-btn>
+          <q-btn class="q-mr-md" flat>注册</q-btn>
         </div>
         <div class="lt-sm">
           <q-btn
