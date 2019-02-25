@@ -1,6 +1,5 @@
 <template>
   <q-card inline>
-
     <q-card-media>
       <img :src="image"/>
     </q-card-media>
@@ -25,7 +24,6 @@
         :color="'grey'"
         class="q-mr-md"/>
     </q-card-main>
-
   </q-card>
 </template>
 
