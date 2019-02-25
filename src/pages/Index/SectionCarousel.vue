@@ -22,7 +22,6 @@
       <div class="main">
         <b class="title">新锐旅游网站</b>
         <p class="subtitle">您身边的好玩专家</p>
-        <p>发现周边好玩的地方，玩得快乐，玩得精彩。</p>
         <div class="row">
           <div class="col-md-2 col-xs-1"></div>
           <div class="col-md-8 col-xs-10">
@@ -35,6 +34,23 @@
               <q-autocomplete
                 :static-data="{field: 'label', list: countries}"
                 :filter="advFilter"/>
+              <q-popover
+                no-focus
+                fit
+                v-show="!search">
+                <div class="row viewList">
+                  <div class="col-sm-4 col-xs-12">
+                    <q-list>
+                      <q-list-header>热门目的地</q-list-header>
+                      <q-item>
+                        <q-item-main>珠海</q-item-main>
+                      </q-item>
+                    </q-list>
+                  </div>
+                  <div class="col-sm-4 col-xs-12"></div>
+                  <div class="col-sm-4 col-xs-12"></div>
+                </div>
+              </q-popover>
             </q-input>
           </div>
           <div class="col-md-2 col-xs-1"></div>
@@ -106,6 +122,12 @@
 
     .carouselInput .subtitle {
       font-size 16px
+    }
+  }
+
+  @media (max-width: 576px) {
+    .viewList {
+      width: 280px
     }
   }
 </style>
