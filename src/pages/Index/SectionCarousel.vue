@@ -33,7 +33,9 @@
             placeholder="输入城市/景点 或是想去的地方"
             :after="[{icon:'fas fa-search-location'}]"
             v-model="search">
-            <q-autocomplete :static-data="{field: 'label', list: countries}"/>
+            <q-autocomplete
+              :static-data="{field: 'label', list: countries}"
+              :filter="advFilter"/>
           </q-input>
         </div>
         <div class="col-md-2 col-xs-1"></div>
@@ -43,11 +45,27 @@
 </template>
 
 <script>
+  import _ from '../../../node_modules/lodash';
+
   export default {
     name: "SectionCarousel",
     data() {
       return {
-        search: ''
+        search: '',
+        countries: [
+          {label: '广州市', icon: 'fas fa-map-marker-alt'},
+          {label: '深圳市', icon: 'fas fa-map-marker-alt'},
+          {label: '珠海市', icon: 'fas fa-map-marker-alt'},
+          {label: '[网美景点]香山公园，秋季赏枫胜地', stamp: '北京市'},
+          {label: '珠海长隆[海豚剧场]精彩不容错过！精彩变身演出抢先看', stamp: '珠海，长隆', rightTextColor: 'pink-13'}
+        ]
+      }
+    },
+    methods: {
+      advFilter(terms, {field, list}) {
+        return _.filter(list, context => {
+          return context[field].match(terms)
+        })
       }
     }
   }
