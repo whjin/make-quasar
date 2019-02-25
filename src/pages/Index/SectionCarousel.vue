@@ -33,22 +33,111 @@
               v-model="search">
               <q-autocomplete
                 :static-data="{field: 'label', list: countries}"
-                :filter="advFilter"/>
+                :filter="advFilter"
+              />
               <q-popover
                 no-focus
                 fit
                 v-show="!search">
                 <div class="row viewList">
                   <div class="col-sm-4 col-xs-12">
-                    <q-list>
+                    <q-list link no-border>
                       <q-list-header>热门目的地</q-list-header>
                       <q-item>
-                        <q-item-main>珠海</q-item-main>
+                        <q-item-main>
+                          珠海
+                          <l-icon :icon="'fab fa-gripfire'" :text="'Hot'" :color="'orange'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          北京
+                          <l-icon :icon="'fab fa-gripfire'" :text="'Hot'" :color="'orange'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          九寨沟
+                          <l-icon :icon="'fas fa-cannabis'" :text="'人间仙境'" :color="'#f44336'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          香港
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          成都
+                        </q-item-main>
                       </q-item>
                     </q-list>
                   </div>
-                  <div class="col-sm-4 col-xs-12"></div>
-                  <div class="col-sm-4 col-xs-12"></div>
+                  <div class="col-sm-4 col-xs-12">
+                    <q-list link no-border>
+                      <q-list-header>国内旅游</q-list-header>
+                      <q-item>
+                        <q-item-main>
+                          武汉
+                          <l-icon :icon="'fab fa-pagelines'" :text="'樱花美景'" :color="'#f50057'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          厦门
+                          <l-icon :icon="'fab fa-gripfire'" :text="'Hot'" :color="'orange'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          西安
+                          <l-icon :icon="'fab fa-gripfire'" :text="'Hot'" :color="'orange'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          丽江
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          杭州
+                        </q-item-main>
+                      </q-item>
+                    </q-list>
+                  </div>
+                  <div class="col-sm-4 col-xs-12">
+                    <q-list link no-border>
+                      <q-list-header>海外地区</q-list-header>
+                      <q-item>
+                        <q-item-main>
+                          加州
+                          <l-icon :icon="'fab fa-gripfire'" :text="'Hot'" :color="'orange'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          巴塞罗那
+                          <l-icon :icon="'fab fa-gripfire'" :text="'Hot'" :color="'orange'"/>
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          巴黎
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          罗马
+                        </q-item-main>
+                      </q-item>
+                      <q-item>
+                        <q-item-main>
+                          米兰
+                        </q-item-main>
+                      </q-item>
+                    </q-list>
+                  </div>
                 </div>
               </q-popover>
             </q-input>
@@ -62,6 +151,7 @@
 
 <script>
   import _ from '../../../node_modules/lodash';
+  import LIcon from 'src/components/LIcon';
 
   export default {
     name: "SectionCarousel",
@@ -76,6 +166,9 @@
           {label: '珠海长隆[海豚剧场]精彩不容错过！精彩变身演出抢先看', stamp: '珠海，长隆', rightTextColor: 'pink-13'}
         ]
       }
+    },
+    components: {
+      LIcon
     },
     methods: {
       advFilter(terms, {field, list}) {
@@ -99,6 +192,12 @@
 
   .carouselInput .main .search {
     width: 300px
+  }
+
+  .imageWall {
+    width: 100px
+    height: 100px
+    object-fit cover
   }
 
   .row {

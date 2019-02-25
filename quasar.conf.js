@@ -40,6 +40,12 @@ module.exports = function (ctx) {
     framework: {
       components: [
         'QAutocomplete',
+        'QCard',
+        'QCardTitle',
+        'QCardMain',
+        'QCardMedia',
+        'QCardSeparator',
+        'QCardActions',
         'QCarousel',
         'QCarouselSlide',
         'QCarouselControl',

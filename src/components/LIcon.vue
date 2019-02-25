@@ -1,7 +1,7 @@
 <template>
-  <div class="layout" :style="{color:color}">
+  <div class="layout" :style="{ color: color}">
     <q-icon :class="icon"/>
-    {{text}}
+    {{ text }}
   </div>
 </template>
 
@@ -11,7 +11,7 @@
     props: {
       text: String,
       icon: String,
-      color: String
+      color: String,
     }
   }
 </script>
