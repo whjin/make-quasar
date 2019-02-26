@@ -40,6 +40,8 @@ module.exports = function (ctx) {
     framework: {
       components: [
         'QAutocomplete',
+        'QBreadcrumbs',
+        'QBreadcrumbsEl',
         'QCard',
         'QCardTitle',
         'QCardMain',
@@ -56,6 +58,8 @@ module.exports = function (ctx) {
         'QPageContainer',
         'QPage',
         'QPopover',
+        'QParallax',
+        'QRating',
         'QToolbar',
         'QToolbarTitle',
         'QBtn',
