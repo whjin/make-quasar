@@ -11,7 +11,7 @@
           <div slot="subtitle">WeFunWeb</div>
         </q-toolbar-title>
         <div class="gt-xs">
-          <q-btn class="q-mr-md" flat>精选景点</q-btn>
+          <q-btn class="q-mr-md" @click="$router.push('/Place')" flat>精选景点</q-btn>
           <q-btn class="q-mr-md" flat>美食地图</q-btn>
           <q-btn class="q-mr-md" flat>夜宿晓行</q-btn>
           <q-btn class="q-mr-md" flat>登录</q-btn>
@@ -36,7 +36,7 @@
         inset-delimiter
         dark>
         <q-list-header>好玩旅游网</q-list-header>
-        <q-item>
+        <q-item to="/Place">
           <q-item-side icon="fas fa-search-location"/>
           <q-item-main label="精选景点"/>
         </q-item>

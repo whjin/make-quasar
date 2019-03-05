@@ -33,28 +33,28 @@
             comment: '75',
             view: '2643',
             locate: '广东 深圳市',
-            image: '../statics/images/card1.jpg'
+            image: 'statics/images/card1.jpg'
           }, {
             title: "苏州园林",
             rate: '4.8',
             comment: '82',
             view: '3621',
             locate: '江苏 苏州市',
-            image: '../statics/images/card2.jpg'
+            image: 'statics/images/card2.jpg'
           }, {
             title: "杭州西湖",
             rate: '5.0',
             comment: '99',
             view: '5812',
             locate: '浙江 杭州市',
-            image: '../statics/images/card3.jpg'
+            image: 'statics/images/card3.jpg'
           }, {
             title: "沙面大街",
             rate: '4.2',
             comment: '43',
             view: '1456',
             locate: '广东 广州市',
-            image: '../statics/images/card4.jpg'
+            image: 'statics/images/card4.jpg'
           }
         ]
       }

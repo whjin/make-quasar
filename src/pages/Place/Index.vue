@@ -47,7 +47,12 @@
             />
           </div>
           <div class="col-4 info-right">
-            <q-rating v-model="localData.rate" :max="5" color="amber" size="16px" disable/>
+            <q-rating
+              v-model="localData.rate"
+              :max="5"
+              color="amber"
+              size="16px"
+              disable/>
             <span class="q-ml-sm">{{localData.comment}}个评价</span>
           </div>
         </div>
@@ -66,7 +71,7 @@
       return {
         localData: {
           title: '宛若仙境 美轮美奂的杭州西湖',
-          image: '../statics/images/local.jpg',
+          image: 'statics/images/local.jpg',
           country: '中国',
           locate: '浙江省',
           address: '杭州市西湖区龙井路1号',
